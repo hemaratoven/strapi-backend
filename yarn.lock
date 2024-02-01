@@ -1904,6 +1904,15 @@
   resolved "https://registry.yarnpkg.com/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.19.0.tgz#cd84bb6ee69d60984e2eec51c6ac33f921da7665"
   integrity sha512-2L5kXhUocPQvciuadMzLQdKp+JuAWxonAeu5sO/bj2Hhw5mhrW6/xVe+FIxCza1i2Q/ZvCF9Sn1rC2z8IUOQxw==
 
+"@strapi/provider-email-mailgun@^4.19.1":
+  version "4.19.1"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-mailgun/-/provider-email-mailgun-4.19.1.tgz#23a538e1c3becbca1bf8804bc4de6a64751d2401"
+  integrity sha512-hh7/rU2UPH7JUMoPUiNy8Dung2wlNH3MCIOaBsxzORT+2ZyS9QudWTWyUnjy9Jnxm03tA9z6LztFUoCprcXcXg==
+  dependencies:
+    "@strapi/utils" "4.19.1"
+    form-data "^4.0.0"
+    mailgun.js "8.2.1"
+
 "@strapi/provider-email-sendmail@4.19.0":
   version "4.19.0"
   resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-4.19.0.tgz#49cb54bd1747cb1a03bf80b6ce8a106247debe17"
@@ -2052,6 +2061,18 @@
   version "4.19.0"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.19.0.tgz#efc64c9f823bbd19c0482ac83d77e5a0810cc299"
   integrity sha512-iqA7knGt6ELxu/98FxRBIetuNz0hjZOhdlK2ikGrJYz1wOuya7YaYdoi6mZ1jU7JJd2qiisoUlha9Kkc+n0shg==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    http-errors "1.8.1"
+    lodash "4.17.21"
+    p-map "4.0.0"
+    yup "0.32.9"
+
+"@strapi/utils@4.19.1":
+  version "4.19.1"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.19.1.tgz#6bfcbb1ab80d938724a3492aa7de3605f37f77f9"
+  integrity sha512-BOLMAA9kUKsP6roiD5Xh+2xHY3b36cQ1Uai4uMZj+NBb17FJvP3Zbo4Bbbho5U24eC8tqUg3CDCzYq9exLDslw==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.30.0"
@@ -2803,6 +2824,15 @@ axios@1.6.0:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
+axios@^1.3.3:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.7.tgz#7b48c2e27c96f9c68a2f8f31e2ab19f59b06b0a7"
+  integrity sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==
+  dependencies:
+    follow-redirects "^1.15.4"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
 b4a@^1.6.4:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.6.4.tgz#ef1c1422cae5ce6535ec191baeed7567443f36c9"
@@ -2832,6 +2862,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base-64@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/base-64/-/base-64-1.0.0.tgz#09d0f2084e32a3fd08c2475b973788eee6ae8f4a"
+  integrity sha512-kwDPIFCGx0NZHog36dj+tHiwP4QMzsZ3AgMViUBKI0+V5n4U0ufTCUMhnQ04diaRI8EX/QcPfql7zlhZ7j4zgg==
 
 base64-js@^1.0.2, base64-js@^1.3.1:
   version "1.5.1"
@@ -6352,6 +6387,15 @@ mailcomposer@3.12.0:
     buildmail "3.10.0"
     libmime "2.1.0"
 
+mailgun.js@8.2.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/mailgun.js/-/mailgun.js-8.2.1.tgz#a5b828fea76b926ce4028ac528ff6bce9481c853"
+  integrity sha512-iKHCMehdUcWzBAp8KU2idLP7AbsTxQ8DjJev4Gvm430Dujul+ZkzKPgn40uYpb9BXGL5l8/w5jpf2pvw51df/w==
+  dependencies:
+    axios "^1.3.3"
+    base-64 "^1.0.0"
+    url-join "^4.0.1"
+
 make-dir@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
@@ -9365,7 +9409,7 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg==
 
-url-join@4.0.1:
+url-join@4.0.1, url-join@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
   integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==

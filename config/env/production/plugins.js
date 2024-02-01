@@ -39,7 +39,6 @@ module.exports = ({ env }) => ({
         settings: {
           defaultFrom: 'postmaster@affix-tech.com',
           defaultReplyTo: 'postmaster@affix-tech.com',
-          testAddress: env("EMAIL_TEST_ADDRESS"),
         },
       },
     },
