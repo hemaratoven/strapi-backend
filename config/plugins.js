@@ -43,28 +43,28 @@ module.exports = ({ env }) => ({
         // },
 
 
-        provider: 'nodemailer',
-        providerOptions: {
-          host: env('SMTP_HOST', 'smtp.sendgrid.net'),
-          port: env('SMTP_PORT', 465),
-          auth: {
-            user: env('SMTP_USERNAME'),
-            pass: env('SMTP_PASSWORD'),
-          },
-        },
-        settings: {
-          defaultFrom: 'hemarat.mat@affix-tech.com', 
-          defaultReplyTo: 'patandnay766@gmail.com',
-        },
-
-        // provider: 'sendgrid',
+        // provider: 'nodemailer',
         // providerOptions: {
-        //   apiKey: env('SENDGRID_API_KEY'),
+        //   host: env('SMTP_HOST', 'smtp.sendgrid.net'),
+        //   port: env('SMTP_PORT', 465),
+        //   auth: {
+        //     user: env('SMTP_USERNAME'),
+        //     pass: env('SMTP_PASSWORD'),
+        //   },
         // },
         // settings: {
-        //   defaultFrom: 'hemarat.mat@affix-tech.com',
-        //   defaultReplyTo: 'hemarat.mat@affix-tech.com',
+        //   defaultFrom: 'admin@affix-tech.com', 
+        //   defaultReplyTo: 'support.th@affix-tech.com',
         // },
+
+        provider: 'sendgrid',
+        providerOptions: {
+          apiKey: env('SENDGRID_API_KEY'),
+        },
+        settings: {
+          defaultFrom: 'admin@affix-tech.com',
+          defaultReplyTo: 'admin@affix-tech.com',
+        },
       },
     },
     // ...
