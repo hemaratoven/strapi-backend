@@ -21,6 +21,7 @@ module.exports = ({ env }) => [
             "data:",
             "blob:",
             "market-assets.strapi.io",
+            // "http://localhost:1337",
             env("CF_PUBLIC_ACCESS_URL").replace(/^https?:\/\//, ""),
           ],
           "media-src": [
@@ -28,6 +29,7 @@ module.exports = ({ env }) => [
             "data:",
             "blob:",
             "market-assets.strapi.io",
+            // "http://localhost:1337",
             env("CF_PUBLIC_ACCESS_URL").replace(/^https?:\/\//, ""),
           ],
           upgradeInsecureRequests: null,

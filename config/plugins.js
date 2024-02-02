@@ -30,17 +30,41 @@ module.exports = ({ env }) => ({
     },
     email: {
       config: {
-        provider: 'mailgun',
+        // provider: 'mailgun',
+        // providerOptions: {
+        //   key: env('MAILGUN_API_KEY'), // Required
+        //   domain: env('MAILGUN_DOMAIN'), // Required
+        //   url: env('MAILGUN_URL', 'https://api.mailgun.net'), //Optional. If domain region is Europe use 'https://api.eu.mailgun.net'
+        // },
+        // settings: {
+        //   defaultFrom: 'postmaster@affix-tech.com',
+        //   defaultReplyTo: 'postmaster@affix-tech.com',
+        //   testAddress: env("EMAIL_TEST_ADDRESS"),
+        // },
+
+
+        provider: 'nodemailer',
         providerOptions: {
-          key: env('MAILGUN_API_KEY'), // Required
-          domain: env('MAILGUN_DOMAIN'), // Required
-          url: env('MAILGUN_URL', 'https://api.mailgun.net'), //Optional. If domain region is Europe use 'https://api.eu.mailgun.net'
+          host: env('SMTP_HOST', 'smtp.sendgrid.net'),
+          port: env('SMTP_PORT', 465),
+          auth: {
+            user: env('SMTP_USERNAME'),
+            pass: env('SMTP_PASSWORD'),
+          },
         },
         settings: {
-          defaultFrom: 'postmaster@affix-tech.com',
-          defaultReplyTo: 'postmaster@affix-tech.com',
-          testAddress: env("EMAIL_TEST_ADDRESS"),
+          defaultFrom: 'hemarat.mat@affix-tech.com', 
+          defaultReplyTo: 'patandnay766@gmail.com',
         },
+
+        // provider: 'sendgrid',
+        // providerOptions: {
+        //   apiKey: env('SENDGRID_API_KEY'),
+        // },
+        // settings: {
+        //   defaultFrom: 'hemarat.mat@affix-tech.com',
+        //   defaultReplyTo: 'hemarat.mat@affix-tech.com',
+        // },
       },
     },
     // ...
