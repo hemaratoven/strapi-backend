@@ -3,22 +3,22 @@
 Start Template Strapi To Deploy For Project 
 
 
+1. init project
+2. Deploy to Digital Ocean (App)
+3. Connect Storage
+4. Set Mail Server
 
 
+Tech 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Stack  | Second Header |
+| ------------- | ------------- |
+| Strapi  | Community  |
+| Server  | Digital Ocean (App)  |
+| Database | Postgres |
+| Stroage | Cloudfare R2 |
+| Mail api | Mailgun |
+| Mail service | nodemailer |
 
 
 

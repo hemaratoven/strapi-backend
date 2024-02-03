@@ -56,15 +56,28 @@ module.exports = ({ env }) => ({
         //   defaultFrom: 'admin@affix-tech.com', 
         //   defaultReplyTo: 'support.th@affix-tech.com',
         // },
-
-        provider: 'sendgrid',
+        provider: 'nodemailer',
         providerOptions: {
-          apiKey: env('SENDGRID_API_KEY'),
+          host: env('SMTP_HOST', 'smtp.mailgun.org'),
+          port: env('SMTP_PORT', 587),
+          auth: {
+            user: env('SMTP_USERNAME'),
+            pass: env('SMTP_PASSWORD'),
+          },
         },
         settings: {
-          defaultFrom: 'admin@affix-tech.com',
-          defaultReplyTo: 'admin@affix-tech.com',
+          defaultFrom: "support.th@affix-tech.com",
+          defaultReplyTo: "support.th@affix-tech.com",
         },
+
+        // provider: 'sendgrid',
+        // providerOptions: {
+        //   apiKey: env('SENDGRID_API_KEY'),
+        // },
+        // settings: {
+        //   defaultFrom: 'admin@affix-tech.com',
+        //   defaultReplyTo: 'admin@affix-tech.com',
+        // },
       },
     },
     // ...
