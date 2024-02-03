@@ -1,4 +1,4 @@
-# Strapi For Upload to Digital Ocean App 
+# Strapi For Deploy to Digital Ocean App 
 
 Start Template Strapi To Deploy For Project 
 
